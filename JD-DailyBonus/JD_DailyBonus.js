@@ -78,7 +78,7 @@ var log = true; //是否开启日志, false则关闭
 
 var stop = 0; //自定义延迟签到,单位毫秒,(如填200则每个接口延迟0.2秒执行),默认无延迟
 
-var DeleteCookie = false; //是否清除Cookie, true则开启
+var DeleteCookie = true; //是否清除Cookie, true则开启
 
 var $nobyda = nobyda();
 var start = ReadCookie();
