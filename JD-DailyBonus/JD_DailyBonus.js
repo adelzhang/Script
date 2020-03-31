@@ -198,7 +198,13 @@ function ReadCookie() {
   DualAccount = true;
 
   if (DeleteCookie) {
+     
+    $nobyda.notify("Trace", "", 'trace 1')
+     
     if ($nobyda.isJSBox) {
+       
+      $nobyda.notify("Trace", "", 'trace 2')
+     
       if ($file.exists("shared://JD_Cookie.txt")) {
         if ($file.exists("shared://JD_Cookie2.txt")) {
           $file.delete("shared://JD_Cookie2.txt")
@@ -208,6 +214,9 @@ function ReadCookie() {
         return
       }
     } else if ($nobyda.read("CookieJD")) {
+      
+      $nobyda.notify("Trace", "", 'trace 3')
+     
       $nobyda.write("", "CookieJD")
       $nobyda.write("", "CookieJD2")
       $nobyda.notify("京东Cookie清除成功 !", "", '请手动关闭脚本内"DeleteCookie"选项')
@@ -216,6 +225,8 @@ function ReadCookie() {
     $nobyda.notify("脚本终止", "", '未关闭脚本内"DeleteCookie"选项 ‼️')
     return
   } else if ($nobyda.isRequest) {
+    $nobyda.notify("Trace", "", 'trace 4')
+     
     GetCookie()
     return
   }
